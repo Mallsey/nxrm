@@ -4,7 +4,7 @@
 
 We needed to upload 3.5GB of third party Maven packages to Nexus Repo Manager (NXRM); somewhere in the region of 1600 POM and JAR files.
 
-The upload script is based on [upload2nexus] (https://github.com/kschuemann/linux-scripting/blob/main/upload2nexus.sh) written by [KSchuemann](https://github.com/kschuemann).
+The upload script is based on [upload2nexus](https://github.com/kschuemann/linux-scripting/blob/main/upload2nexus.sh) written by [KSchuemann](https://github.com/kschuemann).
 
 ## Notes
 
