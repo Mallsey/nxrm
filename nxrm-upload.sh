@@ -27,19 +27,15 @@ cat artifacts | while read i; do
                version=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="parent"]/*[local-name()="version"]/text()' $pompath)
 
           fi
-               echo $jarpath
-               echo $pompath
+               #echo $jarpath
+               #echo $pompath
                mvn deploy:deploy-file -DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version -Dpackaging=pom -Dfile=$pompath -DrepositoryId=nexus-ecm -Durl=http://${NEXUS_URL}/repository/maven-releases/ 
      # If the folder contains a pom and a jar file then....
           elif test -n "$pompath"  && test -n "$jarpath"
           then
-               echo "did we get here??"
-               echo $jarpath
-               echo $pompath
+               #echo $jarpath
+               #echo $pompath
                mvn deploy:deploy-file -DpomFile=$pompath -Dfile=$jarpath -DgeneratePom=false -DrepositoryId=nexus-ecm -Durl=http://${NEXUS_URL}/repository/maven-releases/
           fi
-
-  
 done 
-
 echo 'done uploading artifacts'
